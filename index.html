@@ -11,34 +11,54 @@
     <h1>Judge Steely</h1>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="upload.html">Upload</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#upload">Upload</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#blog">Blog</a></li>
       </ul>
     </nav>
   </header>
+
   <main>
-    <section class="hero">
+    <!-- Home Section -->
+    <section id="home" class="hero">
       <h2>Bringing Cutting-edge AI to Powerlifting</h2>
       <p>Analyze your form and technique with precision.</p>
-      <a href="upload.html" class="btn">Upload Your Video</a>
+      <a href="#upload" class="btn">Upload Your Video</a>
     </section>
-    <section class="features">
-      <h2>Features</h2>
-      <ul>
-        <li>Analyze squat depth using AI</li>
-        <li>Track key points and stickers for accuracy</li>
-        <li>Get instant feedback on your form</li>
-      </ul>
+
+    <!-- Upload Section -->
+    <section id="upload" class="upload">
+      <h2>Upload Your Squat Video</h2>
+      <form id="uploadForm">
+        <label for="videoFile">Select video file:</label>
+        <input type="file" id="videoFile" name="videoFile" accept="video/*" required>
+        <button type="submit" class="btn">Upload</button>
+      </form>
     </section>
-    <section class="coming-soon">
-      <h2>iOS App Coming Soon</h2>
-      <p>Stay tuned for the upcoming app where you can upload videos for instant feedback.</p>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <h2>About Judge Steely</h2>
+      <p>Judge Steely brings cutting-edge AI technology to the world of powerlifting. With the power of artificial intelligence, Judge Steely can analyze your form and technique with precision, helping you perfect your lifts.</p>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+      <h2>Blog</h2>
+      <article>
+        <h3>Article Title</h3>
+        <p>Article content...</p>
+      </article>
+      <!-- Add more articles as needed -->
     </section>
   </main>
+
   <footer>
     <p>&copy; 2024 Judge Steely</p>
   </footer>
+
+  <script src="scripts/upload.js"></script>
 </body>
 </html>
+
