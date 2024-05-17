@@ -27,18 +27,8 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 
 #### .gitignore
-
 node_modules/
 .DS_Store
 .env
 
-### Setting Up the Repository
-
-1. **Create the Repository**:
-   - Go to GitHub and create a new repository named `judge-steely`.
-
-2. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/your-username/judge-steely.git
-   cd judge-steely
 
