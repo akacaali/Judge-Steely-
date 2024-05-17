@@ -1,1 +1,64 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333333;
+  padding: 1em 0;
+}
+
+header h1 {
+  text-align: center;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 1em;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.hero {
+  text-align: center;
+  padding: 2em 1em;
+  background-color: #000000;
+}
+
+.hero h2 {
+  margin: 0;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1em;
+  padding: 0.5em 2em;
+  background-color: #444444;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.features, .coming-soon {
+  padding: 2em 1em;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 1em 0;
+  background-color: #333333;
+}
 
