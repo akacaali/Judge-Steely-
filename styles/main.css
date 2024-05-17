@@ -9,6 +9,10 @@ body {
 header {
   background-color: #333333;
   padding: 1em 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
 
 header h1 {
@@ -21,6 +25,7 @@ nav ul {
   display: flex;
   justify-content: center;
   padding: 0;
+  margin: 0;
 }
 
 nav ul li {
@@ -30,11 +35,20 @@ nav ul li {
 nav ul li a {
   color: #ffffff;
   text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  padding-top: 60px; /* Height of the fixed header */
+}
+
+section {
+  padding: 2em 1em;
+  text-align: center;
+  margin: 2em 0;
 }
 
 .hero {
-  text-align: center;
-  padding: 2em 1em;
   background-color: #000000;
 }
 
@@ -51,20 +65,15 @@ nav ul li a {
   text-decoration: none;
 }
 
-.features, .coming-soon {
-  padding: 2em 1em;
-  text-align: center;
+.upload, .about, .blog {
+  background-color: #2a2a2a;
+  margin: 2em 0;
 }
 
 footer {
   text-align: center;
   padding: 1em 0;
   background-color: #333333;
-}
-
-.upload {
-  padding: 2em 1em;
-  text-align: center;
 }
 
 
