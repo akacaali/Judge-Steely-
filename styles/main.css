@@ -48,11 +48,12 @@ section {
   margin: 2em 0;
 }
 
-.hero {
-  background-color: #000000;
+.hero, .intro, .news, .upload, .about, .blog {
+  background-color: #2a2a2a;
+  margin: 2em 0;
 }
 
-.hero h2 {
+.hero h2, .intro h2, .intro h3 {
   margin: 0;
 }
 
@@ -65,19 +66,10 @@ section {
   text-decoration: none;
 }
 
-.upload, .about, .blog, .intro, .news {
-  background-color: #2a2a2a;
-  margin: 2em 0;
-}
-
 footer {
   text-align: center;
   padding: 1em 0;
   background-color: #333333;
-}
-
-.intro h2, .intro h3 {
-  margin: 0;
 }
 
 .news article {
