@@ -1,19 +1,21 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f0f0f0;
-  color: #333333;
+  background-color: #1a1a1a;
+  color: #e0e0e0;
   margin: 0;
   padding: 0;
 }
 
 header {
-  background-color: #4A90E2;
+  display: flex;
+  align-items: center;
+  background-color: #333333;
   padding: 1em 0;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 header .logo {
@@ -22,7 +24,6 @@ header .logo {
 }
 
 header h1 {
-  text-align: center;
   margin: 0;
   color: #ffffff;
 }
@@ -49,7 +50,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background-color: #357ABD;
+  background-color: #555555;
 }
 
 main {
@@ -60,21 +61,21 @@ section {
   padding: 2em 1em;
   text-align: center;
   margin: 2em 0;
-  background-color: #ffffff;
+  background-color: #2a2a2a;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .hero {
-  background-color: #DFF3FC;
+  background-color: #333333;
 }
 
 .hero h2, .intro h2, .intro h3 {
   margin: 0;
-  color: #333333;
+  color: #e0e0e0;
 }
 
 .btn {
@@ -85,7 +86,7 @@ section {
   color: #ffffff;
   text-decoration: none;
   border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -97,16 +98,16 @@ section {
 footer {
   text-align: center;
   padding: 1em 0;
-  background-color: #4A90E2;
+  background-color: #333333;
   color: #ffffff;
 }
 
 .news article {
   margin: 1em 0;
-  background-color: #ffffff;
+  background-color: #2a2a2a;
   padding: 1em;
   border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 
