@@ -1,27 +1,30 @@
-import { storage, functions } from './firebase.js';
-import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-import { httpsCallable } from "firebase/functions";
+import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-storage.js";
 
-document.getElementById('uploadForm').addEventListener('submit', (event) => {
+document.getElementById('uploadForm').addEventListener('submit', function(event) {
   event.preventDefault();
+  const file = document.getElementById('videoFile').files[0];
+  if (!file) {
+    console.error("No file selected");
+    return;
+  }
 
-  const fileInput = document.getElementById('videoFile');
-  const file = fileInput.files[0];
-  const reader = new FileReader();
+  const storage = getStorage();
+  const storageRef = ref(storage, 'uploads/' + file.name);
+  const uploadTask = uploadBytesResumable(storageRef, file);
 
-  reader.onload = (e) => {
-    const base64File = e.target.result.split(',')[1];
-
-    const uploadVideo = httpsCallable(functions, 'uploadVideo');
-    uploadVideo({ file: base64File, fileName: file.name })
-      .then((result) => {
-        console.log('Video uploaded and processed:', result.data);
-      })
-      .catch((error) => {
-        console.error('Error uploading video:', error);
+  uploadTask.on('state_changed', 
+    (snapshot) => {
+      const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+      console.log('Upload is ' + progress + '% done');
+    }, 
+    (error) => {
+      console.error('Upload failed:', error);
+    }, 
+    () => {
+      getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+        console.log('File available at', downloadURL);
+        alert('Upload successful! File available at: ' + downloadURL);
       });
-  };
-
-  reader.readAsDataURL(file);
+    }
+  );
 });
-
