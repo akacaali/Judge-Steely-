@@ -1,0 +1,249 @@
+[debug] [2024-05-18T08:39:22.196Z] ----------------------------------------------------------------------
+[debug] [2024-05-18T08:39:22.198Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\david\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions
+[debug] [2024-05-18T08:39:22.198Z] CLI Version:   13.9.0
+[debug] [2024-05-18T08:39:22.198Z] Platform:      win32
+[debug] [2024-05-18T08:39:22.198Z] Node Version:  v20.13.1
+[debug] [2024-05-18T08:39:22.198Z] Time:          Sat May 18 2024 03:39:22 GMT-0500 (Central Daylight Time)
+[debug] [2024-05-18T08:39:22.198Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-05-18T08:39:22.248Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-05-18T08:39:22.248Z] > authorizing via signed-in user (davidcali1022@gmail.com)
+[debug] [2024-05-18T08:39:22.248Z] [iam] checking project judge-steely for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2024-05-18T08:39:22.249Z] > refreshing access token with scopes: []
+[debug] [2024-05-18T08:39:22.250Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-05-18T08:39:22.250Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-05-18T08:39:22.414Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-05-18T08:39:22.414Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-05-18T08:39:22.418Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/judge-steely:testIamPermissions [none]
+[debug] [2024-05-18T08:39:22.418Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/judge-steely:testIamPermissions x-goog-quota-user=projects/judge-steely
+[debug] [2024-05-18T08:39:22.419Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/judge-steely:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-05-18T08:39:22.565Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/judge-steely:testIamPermissions 200
+[debug] [2024-05-18T08:39:22.565Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/judge-steely:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-05-18T08:39:22.566Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/judge-steely/serviceAccounts/judge-steely@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2024-05-18T08:39:22.566Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/judge-steely/serviceAccounts/judge-steely@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2024-05-18T08:39:22.677Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/judge-steely/serviceAccounts/judge-steely@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2024-05-18T08:39:22.677Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/judge-steely/serviceAccounts/judge-steely@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'judge-steely'...
+[info] 
+[info] i  deploying functions 
+[info] +  functions: Finished running predeploy script. 
+[debug] [2024-05-18T08:39:22.679Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/judge-steely [none]
+[debug] [2024-05-18T08:39:22.820Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/judge-steely 200
+[debug] [2024-05-18T08:39:22.820Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/judge-steely {"projectId":"judge-steely","projectNumber":"33184051649","displayName":"Judge Steely","name":"projects/judge-steely","resources":{"hostingSite":"judge-steely"},"state":"ACTIVE","etag":"1_b1bb5e42-b9e5-45cf-b594-d69f0c01ec7c"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2024-05-18T08:39:22.821Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/judge-steely/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-05-18T08:39:22.822Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/judge-steely/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/judge-steely
+[debug] [2024-05-18T08:39:22.822Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/judge-steely/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-05-18T08:39:22.822Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/judge-steely/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/judge-steely
+[debug] [2024-05-18T08:39:22.823Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/judge-steely/services/cloudbuild.googleapis.com [none]
+[debug] [2024-05-18T08:39:22.823Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/judge-steely/services/cloudbuild.googleapis.com x-goog-quota-user=projects/judge-steely
+[debug] [2024-05-18T08:39:22.824Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/judge-steely/services/artifactregistry.googleapis.com [none]
+[debug] [2024-05-18T08:39:22.824Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/judge-steely/services/artifactregistry.googleapis.com x-goog-quota-user=projects/judge-steely
+[debug] [2024-05-18T08:39:23.042Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/judge-steely/services/artifactregistry.googleapis.com 200
+[debug] [2024-05-18T08:39:23.042Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/judge-steely/services/artifactregistry.googleapis.com [omitted]
+[warn] !  artifactregistry: missing required API artifactregistry.googleapis.com. Enabling now... 
+[debug] [2024-05-18T08:39:23.043Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/judge-steely/services/artifactregistry.googleapis.com:enable [none]
+[debug] [2024-05-18T08:39:23.043Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/judge-steely/services/artifactregistry.googleapis.com:enable x-goog-quota-user=projects/judge-steely
+[debug] [2024-05-18T08:39:23.071Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/judge-steely/services/runtimeconfig.googleapis.com 200
+[debug] [2024-05-18T08:39:23.071Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/judge-steely/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2024-05-18T08:39:23.075Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/judge-steely/services/cloudfunctions.googleapis.com 200
+[debug] [2024-05-18T08:39:23.075Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/judge-steely/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2024-05-18T08:39:23.107Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/judge-steely/services/cloudbuild.googleapis.com 200
+[debug] [2024-05-18T08:39:23.107Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/judge-steely/services/cloudbuild.googleapis.com [omitted]
+[warn] !  functions: missing required API cloudbuild.googleapis.com. Enabling now... 
+[debug] [2024-05-18T08:39:23.107Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/judge-steely/services/cloudbuild.googleapis.com:enable [none]
+[debug] [2024-05-18T08:39:23.107Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/judge-steely/services/cloudbuild.googleapis.com:enable x-goog-quota-user=projects/judge-steely
+[debug] [2024-05-18T08:39:23.459Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/judge-steely/services/artifactregistry.googleapis.com:enable 200
+[debug] [2024-05-18T08:39:23.459Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/judge-steely/services/artifactregistry.googleapis.com:enable [omitted]
+[debug] [2024-05-18T08:39:23.530Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/judge-steely/services/cloudbuild.googleapis.com:enable 200
+[debug] [2024-05-18T08:39:23.530Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/judge-steely/services/cloudbuild.googleapis.com:enable [omitted]
+[debug] [2024-05-18T08:39:33.460Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/judge-steely/services/artifactregistry.googleapis.com [none]
+[debug] [2024-05-18T08:39:33.460Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/judge-steely/services/artifactregistry.googleapis.com x-goog-quota-user=projects/judge-steely
+[debug] [2024-05-18T08:39:33.539Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/judge-steely/services/cloudbuild.googleapis.com [none]
+[debug] [2024-05-18T08:39:33.539Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/judge-steely/services/cloudbuild.googleapis.com x-goog-quota-user=projects/judge-steely
+[debug] [2024-05-18T08:39:33.680Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/judge-steely/services/artifactregistry.googleapis.com 200
+[debug] [2024-05-18T08:39:33.680Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/judge-steely/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2024-05-18T08:39:33.781Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/judge-steely/services/cloudbuild.googleapis.com 200
+[debug] [2024-05-18T08:39:33.781Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/judge-steely/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2024-05-18T08:39:33.783Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/judge-steely/adminSdkConfig [none]
+[debug] [2024-05-18T08:39:33.932Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/judge-steely/adminSdkConfig 200
+[debug] [2024-05-18T08:39:33.932Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/judge-steely/adminSdkConfig {"projectId":"judge-steely","storageBucket":"judge-steely.appspot.com"}
+[debug] [2024-05-18T08:39:33.932Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/judge-steely/configs [none]
+[debug] [2024-05-18T08:39:34.050Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/judge-steely/configs 200
+[debug] [2024-05-18T08:39:34.050Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/judge-steely/configs {}
+[debug] [2024-05-18T08:39:34.051Z] Validating nodejs source
+[warn] !  functions: Runtime Node.js 14 was deprecated on 2024-01-30 and will be decommissioned on 2025-01-30, after which you will not be able to deploy without upgrading. Consider upgrading now to avoid disruption. See https://cloud.google.com/functions/docs/runtime-support for full details on the lifecycle policy 
+[debug] [2024-05-18T08:39:34.768Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "14"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^9.2.0",
+    "firebase-functions": "^3.11.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-plugin-promise": "^4.2.1"
+  },
+  "private": true
+}
+[debug] [2024-05-18T08:39:34.769Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase default to determine what to deploy 
+[debug] [2024-05-18T08:39:34.769Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-05-18T08:39:34.775Z] Found firebase-functions binary at 'C:\Users\david\Desktop\judge-steelyy\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8924
+
+[debug] [2024-05-18T08:39:35.062Z] Got response from /__/functions.yaml {"endpoints":{"processVideo":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"processVideo"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged C:\Users\david\Desktop\judge-steelyy\functions (73.13 KB) for uploading 
+[debug] [2024-05-18T08:39:40.107Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/judge-steely/locations/-/functions [none]
+[debug] [2024-05-18T08:39:40.569Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/judge-steely/locations/-/functions 200
+[debug] [2024-05-18T08:39:40.569Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/judge-steely/locations/-/functions {}
+[debug] [2024-05-18T08:39:40.569Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/judge-steely/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2024-05-18T08:39:40.973Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/judge-steely/locations/-/functions 200
+[debug] [2024-05-18T08:39:40.973Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/judge-steely/locations/-/functions {}
+[debug] [2024-05-18T08:39:40.974Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/judge-steely [none]
+[debug] [2024-05-18T08:39:41.096Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/judge-steely 200
+[debug] [2024-05-18T08:39:41.096Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/judge-steely {"projectId":"judge-steely","projectNumber":"33184051649","displayName":"Judge Steely","name":"projects/judge-steely","resources":{"hostingSite":"judge-steely"},"state":"ACTIVE","etag":"1_b1bb5e42-b9e5-45cf-b594-d69f0c01ec7c"}
+[debug] [2024-05-18T08:39:41.097Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v1/projects/judge-steely/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2024-05-18T08:39:41.097Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/judge-steely/locations/us-central1/functions:generateUploadUrl {}
+[debug] [2024-05-18T08:39:49.732Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v1/projects/judge-steely/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2024-05-18T08:39:49.732Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/judge-steely/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/uploads-1086032471924.us-central1.cloudfunctions.appspot.com/7072504d-a2ef-405d-bec6-fb57391ebbae.zip?GoogleAccessId=service-33184051649@gcf-admin-robot.iam.gserviceaccount.com&Expires=1716023382&Signature=XqMoI58mykems6Uy6zIaGTbMFuXSYu4YwJlupaF3Xa8Zy0QKkSmBtrrdmE1MMWORt1ZMnryA1pizaPB5%2F%2BUZRM0SmCswDXt8KNqc9kxA6H8FV7f5%2FFdwhxbqXmcv6JYENud%2FbgsyzWKuqBTQvgIERgWJv88o4kzQ1kYy700eYR%2F%2FqjTEqztOosLcj9DFb3fOfMWgPDsMNYHeBA%2BRF%2BdaczHVcpFv%2FHclsVFPe9sAWFORzfC7%2FA%2BgBoLsEdrCUG%2FrqR9ml2VMtH0JtUrSCEtoZ6VFdArq9mso7EZaMe4UtJ3DKsPNwVXc3Z%2Ft8l09k9H2f2Bpu4eRJCGUstlY87CGjA%3D%3D"}
+[debug] [2024-05-18T08:39:49.733Z] >>> [apiv2][query] PUT https://storage.googleapis.com/uploads-1086032471924.us-central1.cloudfunctions.appspot.com/7072504d-a2ef-405d-bec6-fb57391ebbae.zip GoogleAccessId=service-33184051649%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1716023382&Signature=XqMoI58mykems6Uy6zIaGTbMFuXSYu4YwJlupaF3Xa8Zy0QKkSmBtrrdmE1MMWORt1ZMnryA1pizaPB5%2F%2BUZRM0SmCswDXt8KNqc9kxA6H8FV7f5%2FFdwhxbqXmcv6JYENud%2FbgsyzWKuqBTQvgIERgWJv88o4kzQ1kYy700eYR%2F%2FqjTEqztOosLcj9DFb3fOfMWgPDsMNYHeBA%2BRF%2BdaczHVcpFv%2FHclsVFPe9sAWFORzfC7%2FA%2BgBoLsEdrCUG%2FrqR9ml2VMtH0JtUrSCEtoZ6VFdArq9mso7EZaMe4UtJ3DKsPNwVXc3Z%2Ft8l09k9H2f2Bpu4eRJCGUstlY87CGjA%3D%3D
+[debug] [2024-05-18T08:39:49.733Z] >>> [apiv2][body] PUT https://storage.googleapis.com/uploads-1086032471924.us-central1.cloudfunctions.appspot.com/7072504d-a2ef-405d-bec6-fb57391ebbae.zip [stream]
+[debug] [2024-05-18T08:39:50.121Z] <<< [apiv2][status] PUT https://storage.googleapis.com/uploads-1086032471924.us-central1.cloudfunctions.appspot.com/7072504d-a2ef-405d-bec6-fb57391ebbae.zip 200
+[debug] [2024-05-18T08:39:50.121Z] <<< [apiv2][body] PUT https://storage.googleapis.com/uploads-1086032471924.us-central1.cloudfunctions.appspot.com/7072504d-a2ef-405d-bec6-fb57391ebbae.zip [omitted]
+[info] +  functions: functions folder uploaded successfully 
+[info] i  functions: creating Node.js 14 (1st Gen) function processVideo(us-central1)... 
+[debug] [2024-05-18T08:39:50.124Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v1/projects/judge-steely/locations/us-central1/functions [none]
+[debug] [2024-05-18T08:39:50.124Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/judge-steely/locations/us-central1/functions {"name":"projects/judge-steely/locations/us-central1/functions/processVideo","sourceUploadUrl":"https://storage.googleapis.com/uploads-1086032471924.us-central1.cloudfunctions.appspot.com/7072504d-a2ef-405d-bec6-fb57391ebbae.zip?GoogleAccessId=service-33184051649@gcf-admin-robot.iam.gserviceaccount.com&Expires=1716023382&Signature=XqMoI58mykems6Uy6zIaGTbMFuXSYu4YwJlupaF3Xa8Zy0QKkSmBtrrdmE1MMWORt1ZMnryA1pizaPB5%2F%2BUZRM0SmCswDXt8KNqc9kxA6H8FV7f5%2FFdwhxbqXmcv6JYENud%2FbgsyzWKuqBTQvgIERgWJv88o4kzQ1kYy700eYR%2F%2FqjTEqztOosLcj9DFb3fOfMWgPDsMNYHeBA%2BRF%2BdaczHVcpFv%2FHclsVFPe9sAWFORzfC7%2FA%2BgBoLsEdrCUG%2FrqR9ml2VMtH0JtUrSCEtoZ6VFdArq9mso7EZaMe4UtJ3DKsPNwVXc3Z%2Ft8l09k9H2f2Bpu4eRJCGUstlY87CGjA%3D%3D","entryPoint":"processVideo","runtime":"nodejs14","dockerRegistry":"ARTIFACT_REGISTRY","labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"8c2245bb8e191ece3ea9af42c3794142441939fc"},"httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"minInstances":null,"maxInstances":null,"ingressSettings":null,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"judge-steely\",\"storageBucket\":\"judge-steely.appspot.com\"}","GCLOUD_PROJECT":"judge-steely","EVENTARC_CLOUD_EVENT_SOURCE":"projects/judge-steely/locations/us-central1/functions/processVideo"},"serviceAccountEmail":null,"availableMemoryMb":null,"timeout":null,"vpcConnector":null,"vpcConnectorEgressSettings":null,"buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}}
+[debug] [2024-05-18T08:39:50.612Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v1/projects/judge-steely/locations/us-central1/functions 200
+[debug] [2024-05-18T08:39:50.612Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/judge-steely/locations/us-central1/functions {"name":"operations/anVkZ2Utc3RlZWx5L3VzLWNlbnRyYWwxL3Byb2Nlc3NWaWRlby9jR2RSZzg0UTRMMA","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/judge-steely/locations/us-central1/functions/processVideo","type":"CREATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/judge-steely/locations/us-central1/functions/processVideo","httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"entryPoint":"processVideo","labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"8c2245bb8e191ece3ea9af42c3794142441939fc"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-1086032471924.us-central1.cloudfunctions.appspot.com/7072504d-a2ef-405d-bec6-fb57391ebbae.zip?GoogleAccessId=service-33184051649@gcf-admin-robot.iam.gserviceaccount.com&Expires=1716023382&Signature=XqMoI58mykems6Uy6zIaGTbMFuXSYu4YwJlupaF3Xa8Zy0QKkSmBtrrdmE1MMWORt1ZMnryA1pizaPB5%2F%2BUZRM0SmCswDXt8KNqc9kxA6H8FV7f5%2FFdwhxbqXmcv6JYENud%2FbgsyzWKuqBTQvgIERgWJv88o4kzQ1kYy700eYR%2F%2FqjTEqztOosLcj9DFb3fOfMWgPDsMNYHeBA%2BRF%2BdaczHVcpFv%2FHclsVFPe9sAWFORzfC7%2FA%2BgBoLsEdrCUG%2FrqR9ml2VMtH0JtUrSCEtoZ6VFdArq9mso7EZaMe4UtJ3DKsPNwVXc3Z%2Ft8l09k9H2f2Bpu4eRJCGUstlY87CGjA%3D%3D","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"judge-steely\",\"storageBucket\":\"judge-steely.appspot.com\"}","GCLOUD_PROJECT":"judge-steely","EVENTARC_CLOUD_EVENT_SOURCE":"projects/judge-steely/locations/us-central1/functions/processVideo"},"runtime":"nodejs14","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRegistry":"ARTIFACT_REGISTRY"},"versionId":"1","updateTime":"2024-05-18T08:39:43Z"}}
+[debug] [2024-05-18T08:39:50.613Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/anVkZ2Utc3RlZWx5L3VzLWNlbnRyYWwxL3Byb2Nlc3NWaWRlby9jR2RSZzg0UTRMMA [none]
+[debug] [2024-05-18T08:39:50.776Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/anVkZ2Utc3RlZWx5L3VzLWNlbnRyYWwxL3Byb2Nlc3NWaWRlby9jR2RSZzg0UTRMMA 200
+[debug] [2024-05-18T08:39:50.776Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/anVkZ2Utc3RlZWx5L3VzLWNlbnRyYWwxL3Byb2Nlc3NWaWRlby9jR2RSZzg0UTRMMA {"name":"operations/anVkZ2Utc3RlZWx5L3VzLWNlbnRyYWwxL3Byb2Nlc3NWaWRlby9jR2RSZzg0UTRMMA","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/judge-steely/locations/us-central1/functions/processVideo","type":"CREATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/judge-steely/locations/us-central1/functions/processVideo","httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"entryPoint":"processVideo","labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"8c2245bb8e191ece3ea9af42c3794142441939fc"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-1086032471924.us-central1.cloudfunctions.appspot.com/7072504d-a2ef-405d-bec6-fb57391ebbae.zip?GoogleAccessId=service-33184051649@gcf-admin-robot.iam.gserviceaccount.com&Expires=1716023382&Signature=XqMoI58mykems6Uy6zIaGTbMFuXSYu4YwJlupaF3Xa8Zy0QKkSmBtrrdmE1MMWORt1ZMnryA1pizaPB5%2F%2BUZRM0SmCswDXt8KNqc9kxA6H8FV7f5%2FFdwhxbqXmcv6JYENud%2FbgsyzWKuqBTQvgIERgWJv88o4kzQ1kYy700eYR%2F%2FqjTEqztOosLcj9DFb3fOfMWgPDsMNYHeBA%2BRF%2BdaczHVcpFv%2FHclsVFPe9sAWFORzfC7%2FA%2BgBoLsEdrCUG%2FrqR9ml2VMtH0JtUrSCEtoZ6VFdArq9mso7EZaMe4UtJ3DKsPNwVXc3Z%2Ft8l09k9H2f2Bpu4eRJCGUstlY87CGjA%3D%3D","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"judge-steely\",\"storageBucket\":\"judge-steely.appspot.com\"}","GCLOUD_PROJECT":"judge-steely","EVENTARC_CLOUD_EVENT_SOURCE":"projects/judge-steely/locations/us-central1/functions/processVideo"},"runtime":"nodejs14","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRegistry":"ARTIFACT_REGISTRY"},"versionId":"1","updateTime":"2024-05-18T08:39:43Z"}}
+[debug] [2024-05-18T08:39:51.280Z] [create-default-us-central1-processVideo] Retrying task index 0
+[debug] [2024-05-18T08:39:51.281Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/anVkZ2Utc3RlZWx5L3VzLWNlbnRyYWwxL3Byb2Nlc3NWaWRlby9jR2RSZzg0UTRMMA [none]
+[debug] [2024-05-18T08:39:51.426Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/anVkZ2Utc3RlZWx5L3VzLWNlbnRyYWwxL3Byb2Nlc3NWaWRlby9jR2RSZzg0UTRMMA 200
+[debug] [2024-05-18T08:39:51.426Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/anVkZ2Utc3RlZWx5L3VzLWNlbnRyYWwxL3Byb2Nlc3NWaWRlby9jR2RSZzg0UTRMMA {"name":"operations/anVkZ2Utc3RlZWx5L3VzLWNlbnRyYWwxL3Byb2Nlc3NWaWRlby9jR2RSZzg0UTRMMA","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/judge-steely/locations/us-central1/functions/processVideo","type":"CREATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/judge-steely/locations/us-central1/functions/processVideo","httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"entryPoint":"processVideo","labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"8c2245bb8e191ece3ea9af42c3794142441939fc"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-1086032471924.us-central1.cloudfunctions.appspot.com/7072504d-a2ef-405d-bec6-fb57391ebbae.zip?GoogleAccessId=service-33184051649@gcf-admin-robot.iam.gserviceaccount.com&Expires=1716023382&Signature=XqMoI58mykems6Uy6zIaGTbMFuXSYu4YwJlupaF3Xa8Zy0QKkSmBtrrdmE1MMWORt1ZMnryA1pizaPB5%2F%2BUZRM0SmCswDXt8KNqc9kxA6H8FV7f5%2FFdwhxbqXmcv6JYENud%2FbgsyzWKuqBTQvgIERgWJv88o4kzQ1kYy700eYR%2F%2FqjTEqztOosLcj9DFb3fOfMWgPDsMNYHeBA%2BRF%2BdaczHVcpFv%2FHclsVFPe9sAWFORzfC7%2FA%2BgBoLsEdrCUG%2FrqR9ml2VMtH0JtUrSCEtoZ6VFdArq9mso7EZaMe4UtJ3DKsPNwVXc3Z%2Ft8l09k9H2f2Bpu4eRJCGUstlY87CGjA%3D%3D","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"judge-steely\",\"storageBucket\":\"judge-steely.appspot.com\"}","GCLOUD_PROJECT":"judge-steely","EVENTARC_CLOUD_EVENT_SOURCE":"projects/judge-steely/locations/us-central1/functions/processVideo"},"runtime":"nodejs14","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRegistry":"ARTIFACT_REGISTRY"},"versionId":"1","updateTime":"2024-05-18T08:39:43Z"}}
+[debug] [2024-05-18T08:39:52.428Z] [create-default-us-central1-processVideo] Retrying task index 0
+[debug] [2024-05-18T08:39:52.428Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/anVkZ2Utc3RlZWx5L3VzLWNlbnRyYWwxL3Byb2Nlc3NWaWRlby9jR2RSZzg0UTRMMA [none]
+[debug] [2024-05-18T08:39:52.565Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/anVkZ2Utc3RlZWx5L3VzLWNlbnRyYWwxL3Byb2Nlc3NWaWRlby9jR2RSZzg0UTRMMA 200
+[debug] [2024-05-18T08:39:52.565Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/anVkZ2Utc3RlZWx5L3VzLWNlbnRyYWwxL3Byb2Nlc3NWaWRlby9jR2RSZzg0UTRMMA {"name":"operations/anVkZ2Utc3RlZWx5L3VzLWNlbnRyYWwxL3Byb2Nlc3NWaWRlby9jR2RSZzg0UTRMMA","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/judge-steely/locations/us-central1/functions/processVideo","type":"CREATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/judge-steely/locations/us-central1/functions/processVideo","httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"entryPoint":"processVideo","labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"8c2245bb8e191ece3ea9af42c3794142441939fc"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-1086032471924.us-central1.cloudfunctions.appspot.com/7072504d-a2ef-405d-bec6-fb57391ebbae.zip?GoogleAccessId=service-33184051649@gcf-admin-robot.iam.gserviceaccount.com&Expires=1716023382&Signature=XqMoI58mykems6Uy6zIaGTbMFuXSYu4YwJlupaF3Xa8Zy0QKkSmBtrrdmE1MMWORt1ZMnryA1pizaPB5%2F%2BUZRM0SmCswDXt8KNqc9kxA6H8FV7f5%2FFdwhxbqXmcv6JYENud%2FbgsyzWKuqBTQvgIERgWJv88o4kzQ1kYy700eYR%2F%2FqjTEqztOosLcj9DFb3fOfMWgPDsMNYHeBA%2BRF%2BdaczHVcpFv%2FHclsVFPe9sAWFORzfC7%2FA%2BgBoLsEdrCUG%2FrqR9ml2VMtH0JtUrSCEtoZ6VFdArq9mso7EZaMe4UtJ3DKsPNwVXc3Z%2Ft8l09k9H2f2Bpu4eRJCGUstlY87CGjA%3D%3D","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"judge-steely\",\"storageBucket\":\"judge-steely.appspot.com\"}","GCLOUD_PROJECT":"judge-steely","EVENTARC_CLOUD_EVENT_SOURCE":"projects/judge-steely/locations/us-central1/functions/processVideo"},"runtime":"nodejs14","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRegistry":"ARTIFACT_REGISTRY"},"versionId":"1","updateTime":"2024-05-18T08:39:43Z"}}
+[debug] [2024-05-18T08:39:54.570Z] [create-default-us-central1-processVideo] Retrying task index 0
+[debug] [2024-05-18T08:39:54.571Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/anVkZ2Utc3RlZWx5L3VzLWNlbnRyYWwxL3Byb2Nlc3NWaWRlby9jR2RSZzg0UTRMMA [none]
+[debug] [2024-05-18T08:39:54.682Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/anVkZ2Utc3RlZWx5L3VzLWNlbnRyYWwxL3Byb2Nlc3NWaWRlby9jR2RSZzg0UTRMMA 200
+[debug] [2024-05-18T08:39:54.682Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/anVkZ2Utc3RlZWx5L3VzLWNlbnRyYWwxL3Byb2Nlc3NWaWRlby9jR2RSZzg0UTRMMA {"name":"operations/anVkZ2Utc3RlZWx5L3VzLWNlbnRyYWwxL3Byb2Nlc3NWaWRlby9jR2RSZzg0UTRMMA","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/judge-steely/locations/us-central1/functions/processVideo","type":"CREATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/judge-steely/locations/us-central1/functions/processVideo","httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"entryPoint":"processVideo","labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"8c2245bb8e191ece3ea9af42c3794142441939fc"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-1086032471924.us-central1.cloudfunctions.appspot.com/7072504d-a2ef-405d-bec6-fb57391ebbae.zip?GoogleAccessId=service-33184051649@gcf-admin-robot.iam.gserviceaccount.com&Expires=1716023382&Signature=XqMoI58mykems6Uy6zIaGTbMFuXSYu4YwJlupaF3Xa8Zy0QKkSmBtrrdmE1MMWORt1ZMnryA1pizaPB5%2F%2BUZRM0SmCswDXt8KNqc9kxA6H8FV7f5%2FFdwhxbqXmcv6JYENud%2FbgsyzWKuqBTQvgIERgWJv88o4kzQ1kYy700eYR%2F%2FqjTEqztOosLcj9DFb3fOfMWgPDsMNYHeBA%2BRF%2BdaczHVcpFv%2FHclsVFPe9sAWFORzfC7%2FA%2BgBoLsEdrCUG%2FrqR9ml2VMtH0JtUrSCEtoZ6VFdArq9mso7EZaMe4UtJ3DKsPNwVXc3Z%2Ft8l09k9H2f2Bpu4eRJCGUstlY87CGjA%3D%3D","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"judge-steely\",\"storageBucket\":\"judge-steely.appspot.com\"}","GCLOUD_PROJECT":"judge-steely","EVENTARC_CLOUD_EVENT_SOURCE":"projects/judge-steely/locations/us-central1/functions/processVideo"},"runtime":"nodejs14","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRegistry":"ARTIFACT_REGISTRY"},"versionId":"1","updateTime":"2024-05-18T08:39:43Z"}}
+[debug] [2024-05-18T08:39:58.685Z] [create-default-us-central1-processVideo] Retrying task index 0
+[debug] [2024-05-18T08:39:58.686Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/anVkZ2Utc3RlZWx5L3VzLWNlbnRyYWwxL3Byb2Nlc3NWaWRlby9jR2RSZzg0UTRMMA [none]
+[debug] [2024-05-18T08:39:58.817Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/anVkZ2Utc3RlZWx5L3VzLWNlbnRyYWwxL3Byb2Nlc3NWaWRlby9jR2RSZzg0UTRMMA 200
+[debug] [2024-05-18T08:39:58.817Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/anVkZ2Utc3RlZWx5L3VzLWNlbnRyYWwxL3Byb2Nlc3NWaWRlby9jR2RSZzg0UTRMMA {"name":"operations/anVkZ2Utc3RlZWx5L3VzLWNlbnRyYWwxL3Byb2Nlc3NWaWRlby9jR2RSZzg0UTRMMA","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/judge-steely/locations/us-central1/functions/processVideo","type":"CREATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/judge-steely/locations/us-central1/functions/processVideo","httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"entryPoint":"processVideo","labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"8c2245bb8e191ece3ea9af42c3794142441939fc"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-1086032471924.us-central1.cloudfunctions.appspot.com/7072504d-a2ef-405d-bec6-fb57391ebbae.zip?GoogleAccessId=service-33184051649@gcf-admin-robot.iam.gserviceaccount.com&Expires=1716023382&Signature=XqMoI58mykems6Uy6zIaGTbMFuXSYu4YwJlupaF3Xa8Zy0QKkSmBtrrdmE1MMWORt1ZMnryA1pizaPB5%2F%2BUZRM0SmCswDXt8KNqc9kxA6H8FV7f5%2FFdwhxbqXmcv6JYENud%2FbgsyzWKuqBTQvgIERgWJv88o4kzQ1kYy700eYR%2F%2FqjTEqztOosLcj9DFb3fOfMWgPDsMNYHeBA%2BRF%2BdaczHVcpFv%2FHclsVFPe9sAWFORzfC7%2FA%2BgBoLsEdrCUG%2FrqR9ml2VMtH0JtUrSCEtoZ6VFdArq9mso7EZaMe4UtJ3DKsPNwVXc3Z%2Ft8l09k9H2f2Bpu4eRJCGUstlY87CGjA%3D%3D","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"judge-steely\",\"storageBucket\":\"judge-steely.appspot.com\"}","GCLOUD_PROJECT":"judge-steely","EVENTARC_CLOUD_EVENT_SOURCE":"projects/judge-steely/locations/us-central1/functions/processVideo"},"runtime":"nodejs14","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRegistry":"ARTIFACT_REGISTRY"},"versionId":"1","updateTime":"2024-05-18T08:39:43Z"}}
+[debug] [2024-05-18T08:40:06.821Z] [create-default-us-central1-processVideo] Retrying task index 0
+[debug] [2024-05-18T08:40:06.821Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/anVkZ2Utc3RlZWx5L3VzLWNlbnRyYWwxL3Byb2Nlc3NWaWRlby9jR2RSZzg0UTRMMA [none]
+[debug] [2024-05-18T08:40:06.944Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/anVkZ2Utc3RlZWx5L3VzLWNlbnRyYWwxL3Byb2Nlc3NWaWRlby9jR2RSZzg0UTRMMA 200
+[debug] [2024-05-18T08:40:06.944Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/anVkZ2Utc3RlZWx5L3VzLWNlbnRyYWwxL3Byb2Nlc3NWaWRlby9jR2RSZzg0UTRMMA {"name":"operations/anVkZ2Utc3RlZWx5L3VzLWNlbnRyYWwxL3Byb2Nlc3NWaWRlby9jR2RSZzg0UTRMMA","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/judge-steely/locations/us-central1/functions/processVideo","type":"CREATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/judge-steely/locations/us-central1/functions/processVideo","httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"entryPoint":"processVideo","labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"8c2245bb8e191ece3ea9af42c3794142441939fc"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-1086032471924.us-central1.cloudfunctions.appspot.com/7072504d-a2ef-405d-bec6-fb57391ebbae.zip?GoogleAccessId=service-33184051649@gcf-admin-robot.iam.gserviceaccount.com&Expires=1716023382&Signature=XqMoI58mykems6Uy6zIaGTbMFuXSYu4YwJlupaF3Xa8Zy0QKkSmBtrrdmE1MMWORt1ZMnryA1pizaPB5%2F%2BUZRM0SmCswDXt8KNqc9kxA6H8FV7f5%2FFdwhxbqXmcv6JYENud%2FbgsyzWKuqBTQvgIERgWJv88o4kzQ1kYy700eYR%2F%2FqjTEqztOosLcj9DFb3fOfMWgPDsMNYHeBA%2BRF%2BdaczHVcpFv%2FHclsVFPe9sAWFORzfC7%2FA%2BgBoLsEdrCUG%2FrqR9ml2VMtH0JtUrSCEtoZ6VFdArq9mso7EZaMe4UtJ3DKsPNwVXc3Z%2Ft8l09k9H2f2Bpu4eRJCGUstlY87CGjA%3D%3D","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"judge-steely\",\"storageBucket\":\"judge-steely.appspot.com\"}","GCLOUD_PROJECT":"judge-steely","EVENTARC_CLOUD_EVENT_SOURCE":"projects/judge-steely/locations/us-central1/functions/processVideo"},"runtime":"nodejs14","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRegistry":"ARTIFACT_REGISTRY"},"versionId":"1","updateTime":"2024-05-18T08:39:43Z","buildId":"b79d3b4b-3d7f-4c86-bbd1-1077f73c79ba","buildName":"projects/33184051649/locations/us-central1/builds/b79d3b4b-3d7f-4c86-bbd1-1077f73c79ba"}}
+[debug] [2024-05-18T08:40:16.956Z] [create-default-us-central1-processVideo] Retrying task index 0
+[debug] [2024-05-18T08:40:16.957Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/anVkZ2Utc3RlZWx5L3VzLWNlbnRyYWwxL3Byb2Nlc3NWaWRlby9jR2RSZzg0UTRMMA [none]
+[debug] [2024-05-18T08:40:17.101Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/anVkZ2Utc3RlZWx5L3VzLWNlbnRyYWwxL3Byb2Nlc3NWaWRlby9jR2RSZzg0UTRMMA 200
+[debug] [2024-05-18T08:40:17.102Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/anVkZ2Utc3RlZWx5L3VzLWNlbnRyYWwxL3Byb2Nlc3NWaWRlby9jR2RSZzg0UTRMMA {"name":"operations/anVkZ2Utc3RlZWx5L3VzLWNlbnRyYWwxL3Byb2Nlc3NWaWRlby9jR2RSZzg0UTRMMA","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/judge-steely/locations/us-central1/functions/processVideo","type":"CREATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/judge-steely/locations/us-central1/functions/processVideo","httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"entryPoint":"processVideo","labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"8c2245bb8e191ece3ea9af42c3794142441939fc"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-1086032471924.us-central1.cloudfunctions.appspot.com/7072504d-a2ef-405d-bec6-fb57391ebbae.zip?GoogleAccessId=service-33184051649@gcf-admin-robot.iam.gserviceaccount.com&Expires=1716023382&Signature=XqMoI58mykems6Uy6zIaGTbMFuXSYu4YwJlupaF3Xa8Zy0QKkSmBtrrdmE1MMWORt1ZMnryA1pizaPB5%2F%2BUZRM0SmCswDXt8KNqc9kxA6H8FV7f5%2FFdwhxbqXmcv6JYENud%2FbgsyzWKuqBTQvgIERgWJv88o4kzQ1kYy700eYR%2F%2FqjTEqztOosLcj9DFb3fOfMWgPDsMNYHeBA%2BRF%2BdaczHVcpFv%2FHclsVFPe9sAWFORzfC7%2FA%2BgBoLsEdrCUG%2FrqR9ml2VMtH0JtUrSCEtoZ6VFdArq9mso7EZaMe4UtJ3DKsPNwVXc3Z%2Ft8l09k9H2f2Bpu4eRJCGUstlY87CGjA%3D%3D","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"judge-steely\",\"storageBucket\":\"judge-steely.appspot.com\"}","GCLOUD_PROJECT":"judge-steely","EVENTARC_CLOUD_EVENT_SOURCE":"projects/judge-steely/locations/us-central1/functions/processVideo"},"runtime":"nodejs14","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRegistry":"ARTIFACT_REGISTRY"},"versionId":"1","updateTime":"2024-05-18T08:39:43Z","buildId":"b79d3b4b-3d7f-4c86-bbd1-1077f73c79ba","buildName":"projects/33184051649/locations/us-central1/builds/b79d3b4b-3d7f-4c86-bbd1-1077f73c79ba"}}
+[debug] [2024-05-18T08:40:27.106Z] [create-default-us-central1-processVideo] Retrying task index 0
+[debug] [2024-05-18T08:40:27.106Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/operations/anVkZ2Utc3RlZWx5L3VzLWNlbnRyYWwxL3Byb2Nlc3NWaWRlby9jR2RSZzg0UTRMMA [none]
+[debug] [2024-05-18T08:40:27.251Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/operations/anVkZ2Utc3RlZWx5L3VzLWNlbnRyYWwxL3Byb2Nlc3NWaWRlby9jR2RSZzg0UTRMMA 200
+[debug] [2024-05-18T08:40:27.251Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/operations/anVkZ2Utc3RlZWx5L3VzLWNlbnRyYWwxL3Byb2Nlc3NWaWRlby9jR2RSZzg0UTRMMA {"name":"operations/anVkZ2Utc3RlZWx5L3VzLWNlbnRyYWwxL3Byb2Nlc3NWaWRlby9jR2RSZzg0UTRMMA","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1","target":"projects/judge-steely/locations/us-central1/functions/processVideo","type":"CREATE_FUNCTION","request":{"@type":"type.googleapis.com/google.cloud.functions.v1.CloudFunction","name":"projects/judge-steely/locations/us-central1/functions/processVideo","httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"entryPoint":"processVideo","labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"8c2245bb8e191ece3ea9af42c3794142441939fc"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-1086032471924.us-central1.cloudfunctions.appspot.com/7072504d-a2ef-405d-bec6-fb57391ebbae.zip?GoogleAccessId=service-33184051649@gcf-admin-robot.iam.gserviceaccount.com&Expires=1716023382&Signature=XqMoI58mykems6Uy6zIaGTbMFuXSYu4YwJlupaF3Xa8Zy0QKkSmBtrrdmE1MMWORt1ZMnryA1pizaPB5%2F%2BUZRM0SmCswDXt8KNqc9kxA6H8FV7f5%2FFdwhxbqXmcv6JYENud%2FbgsyzWKuqBTQvgIERgWJv88o4kzQ1kYy700eYR%2F%2FqjTEqztOosLcj9DFb3fOfMWgPDsMNYHeBA%2BRF%2BdaczHVcpFv%2FHclsVFPe9sAWFORzfC7%2FA%2BgBoLsEdrCUG%2FrqR9ml2VMtH0JtUrSCEtoZ6VFdArq9mso7EZaMe4UtJ3DKsPNwVXc3Z%2Ft8l09k9H2f2Bpu4eRJCGUstlY87CGjA%3D%3D","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"judge-steely\",\"storageBucket\":\"judge-steely.appspot.com\"}","GCLOUD_PROJECT":"judge-steely","EVENTARC_CLOUD_EVENT_SOURCE":"projects/judge-steely/locations/us-central1/functions/processVideo"},"runtime":"nodejs14","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRegistry":"ARTIFACT_REGISTRY"},"versionId":"1","updateTime":"2024-05-18T08:40:11Z","buildId":"b79d3b4b-3d7f-4c86-bbd1-1077f73c79ba","buildName":"projects/33184051649/locations/us-central1/builds/b79d3b4b-3d7f-4c86-bbd1-1077f73c79ba"},"done":true,"error":{"code":3,"message":"Build failed: npm ERR! Cannot read property 'firebase-admin' of undefined\n\nnpm ERR! A complete log of this run can be found in:\nnpm ERR!     /www-data-home/.npm/_logs/2024-05-18T08_40_09_607Z-debug.log; Error ID: beaf8772"}}
+[debug] [2024-05-18T08:40:27.251Z] Got source token undefined for region us-central1
+[error] Build failed: npm ERR! Cannot read property 'firebase-admin' of undefined
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /www-data-home/.npm/_logs/2024-05-18T08_40_09_607Z-debug.log; Error ID: beaf8772
+[debug] [2024-05-18T08:40:27.255Z] Total Function Deployment time: 37128
+[debug] [2024-05-18T08:40:27.255Z] 1 Functions Deployed
+[debug] [2024-05-18T08:40:27.255Z] 1 Functions Errored
+[debug] [2024-05-18T08:40:27.255Z] 0 Function Deployments Aborted
+[debug] [2024-05-18T08:40:27.255Z] Average Function Deployment time: 37128
+[info] 
+[info] Functions deploy had errors with the following functions:
+	processVideo(us-central1)
+[info] i  functions: cleaning up build files... 
+[debug] [2024-05-18T08:40:27.300Z] >>> [apiv2][query] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/judge-steely/locations/us-central1/repositories/gcf-artifacts/packages/process_video [none]
+[debug] [2024-05-18T08:40:27.301Z] >>> [apiv2][query] GET https://us.gcr.io/v2/judge-steely/gcf/us-central1/tags/list [none]
+[debug] [2024-05-18T08:40:27.513Z] <<< [apiv2][status] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/judge-steely/locations/us-central1/repositories/gcf-artifacts/packages/process_video 404
+[debug] [2024-05-18T08:40:27.513Z] <<< [apiv2][body] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/judge-steely/locations/us-central1/repositories/gcf-artifacts/packages/process_video {"error":{"code":404,"message":"Package \"projects/judge-steely/locations/us-central1/repositories/gcf-artifacts/packages/process_video\" was not found.","status":"NOT_FOUND"}}
+[debug] [2024-05-18T08:40:27.573Z] <<< [apiv2][status] GET https://us.gcr.io/v2/judge-steely/gcf/us-central1/tags/list 404
+[debug] [2024-05-18T08:40:27.573Z] <<< [apiv2][body] GET https://us.gcr.io/v2/judge-steely/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2024-05-18T08:40:27.573Z] Failed docker command with error  HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"HTTP Error: 404, Not Found","status":404}
+[debug] [2024-05-18T08:40:27.578Z] >>> [apiv2][query] GET https://us.gcr.io/v2/judge-steely/gcf/us-central1/tags/list [none]
+[debug] [2024-05-18T08:40:27.704Z] <<< [apiv2][status] GET https://us.gcr.io/v2/judge-steely/gcf/us-central1/tags/list 404
+[debug] [2024-05-18T08:40:27.704Z] <<< [apiv2][body] GET https://us.gcr.io/v2/judge-steely/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2024-05-18T08:40:27.704Z] Failed docker command with error  HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"HTTP Error: 404, Not Found","status":404}
+[debug] [2024-05-18T08:40:27.815Z] >>> [apiv2][query] GET https://us.gcr.io/v2/judge-steely/gcf/us-central1/tags/list [none]
+[debug] [2024-05-18T08:40:27.902Z] <<< [apiv2][status] GET https://us.gcr.io/v2/judge-steely/gcf/us-central1/tags/list 404
+[debug] [2024-05-18T08:40:27.902Z] <<< [apiv2][body] GET https://us.gcr.io/v2/judge-steely/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2024-05-18T08:40:27.902Z] Failed docker command with error  HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"HTTP Error: 404, Not Found","status":404}
+[warn] !  functions: Unhandled error cleaning up build images. This could result in a small monthly bill if not corrected. You can attempt to delete these images by redeploying or you can delete them manually at https://console.cloud.google.com/gcr/images/judge-steely/us/gcf 
+[debug] [2024-05-18T08:40:27.902Z] Functions deploy failed.
+[debug] [2024-05-18T08:40:27.902Z] {
+  "endpoint": {
+    "id": "processVideo",
+    "project": "judge-steely",
+    "region": "us-central1",
+    "entryPoint": "processVideo",
+    "platform": "gcfv1",
+    "runtime": "nodejs14",
+    "callableTrigger": {},
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    },
+    "ingressSettings": null,
+    "availableMemoryMb": null,
+    "serviceAccount": null,
+    "timeoutSeconds": null,
+    "maxInstances": null,
+    "minInstances": null,
+    "vpc": null,
+    "environmentVariables": {
+      "FIREBASE_CONFIG": "{\"projectId\":\"judge-steely\",\"storageBucket\":\"judge-steely.appspot.com\"}",
+      "GCLOUD_PROJECT": "judge-steely",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/judge-steely/locations/us-central1/functions/processVideo"
+    },
+    "codebase": "default",
+    "targetedByOnly": false,
+    "hash": "8c2245bb8e191ece3ea9af42c3794142441939fc"
+  },
+  "op": "create",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "exit": 1,
+    "message": "Build failed: npm ERR! Cannot read property 'firebase-admin' of undefined\n\nnpm ERR! A complete log of this run can be found in:\nnpm ERR!     /www-data-home/.npm/_logs/2024-05-18T08_40_09_607Z-debug.log; Error ID: beaf8772",
+    "original": {
+      "code": 3,
+      "message": "Build failed: npm ERR! Cannot read property 'firebase-admin' of undefined\n\nnpm ERR! A complete log of this run can be found in:\nnpm ERR!     /www-data-home/.npm/_logs/2024-05-18T08_40_09_607Z-debug.log; Error ID: beaf8772"
+    },
+    "status": 3,
+    "code": 3
+  }
+}
+[debug] [2024-05-18T08:40:27.928Z] Error: Failed to create function processVideo in region us-central1
+    at C:\Users\david\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:52:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Fabricator.createV1Function (C:\Users\david\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:182:32)
+    at async Fabricator.createEndpoint (C:\Users\david\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:134:13)
+    at async handle (C:\Users\david\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:89:17)
+[error] 
+[error] Error: There was an error deploying functions
