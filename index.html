@@ -5,26 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Judge Steely</title>
   <link rel="stylesheet" href="styles/main.css">
-  <!-- Add Firebase SDK -->
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-storage.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-functions.js"></script>
-  <script>
-    // Your web app's Firebase configuration
-    const firebaseConfig = {
-      apiKey: "AIzaSyBZ5HrlT2FlNY5tWkNV0yQdCbj6EWPpsuk",
-      authDomain: "judge-steely.firebaseapp.com",
-      projectId: "judge-steely",
-      storageBucket: "judge-steely.appspot.com",
-      messagingSenderId: "33184051649",
-      appId: "1:33184051649:web:7099a58c97b14c4ca43f40",
-      measurementId: "G-QNDZLYXQ5Z"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-  </script>
+  <script type="module" src="scripts/upload.js"></script>
 </head>
 <body>
   <header>
@@ -63,9 +44,5 @@
   <footer>
     <p>&copy; 2024 Judge Steely</p>
   </footer>
-
-  <script src="scripts/upload.js"></script>
-  <script src="scripts/smooth-scroll.js"></script>
 </body>
 </html>
-
