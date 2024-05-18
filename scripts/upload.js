@@ -6,3 +6,4 @@ document.getElementById('uploadForm').addEventListener('submit', async (event) =
   await fileRef.put(file);
   alert('File uploaded successfully!');
 });
+
