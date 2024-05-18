@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "judge-steely",
+  "private_key_id": "306e7bcf1b2d15050c72ebd89398a28223bb71e5",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDSkxE5mqKlVc9q\nWPdwKwKcoWEjagsE7M00NKmMEC+GzcHOiIC8A+RwheLSx74kgNy8lHwJRkJICsCt\n5Q5tFsgUanHegfJqMISWEPlF/r2KPr1gDFDkbwN/7aAEyDt3qplZa1zgFESvRSKi\nF94p1OSJt99a89ZVKhNr9w0UaLxUTRWVcLSdg7lv6N5m6XhftF7SUi537YBaOxf4\nDW26BKXAMepHwF1luIkMWbgO++Oln2IkE8pc8XIkXInmjs7TkOWLo7w5T2//M8vp\nqwx3RBQZNWn9sD3SFocfRaZdBUyD9FVmk1EyTAUckEL5515YHdhYmbCQqNPIVH1e\nz4uHoP/LAgMBAAECggEABoIQGrkqRLThu7YzM47IvmGIeIk6/PR6pR3pjZAkf+SV\nFFaIsAboxQeGSqBswoEPEW7/ZGP9AW//o4A8UWfOWD8v9MIMZXbJaj/tDFpCrmah\nALpwt5asw4PrGaq8l8a4hZh5Xt2Rf99BokPdlGplg9Igf5WgrrIltoUErPhNtcc7\ns6tgSVmvZXnhOaKqLvauxxlRZOajEjZfw1vF8EwPHvROIaihMu+ZPw82PGpkeMek\ngaGXV9yGY2+81iP3uzyG/VPcmntyWibuqlmu3wO14M4BerMNpFcSfcg85dK5QX0c\nv4uRzmmzkPU1jErFG5DFjT7bCDadI/fgR5aVxpqpoQKBgQD/2CQBDurFbxkOhmKE\n2bmDIz1EXRslb8w5KDzaIABUFCP3OOF7zk5zAcehst5U7se6UU+vH75PU/ZMGZue\nCRGUZBq5zGh3EI/SbptxhGlyJDLLMVxNAFeMGPJr4R1++kEAmuHpG++4IbpwGCxp\nEH6npT1GpPyNp0usr7BJOa+sYQKBgQDSs9+yZBJBRPamrCcr8IrY7lO6/1QIh4p9\nRgvxDpxPxkoZfBm7qqaql09A78jD1r21sQIKPuwzUAkvWDES8ACFTtxfFoJjVr+t\nO5HiRR9mzikR2Vd/55WL4mbb8AqMvKbaHZ2lQvmH21RmsWjhpauPvh2gctO5w6GW\nbGfzGR67qwKBgHxlIjRlhV8TwpIeYx6HIj0R0ENCJeXQ8vJDjzrbXm2DEW2t+WyS\nBfDDR8ZmStXu96uux1i1zXmSsGmV9eUkMaj990Spj418vwEpCGlsYTy/Pvcu+9rw\ntKCIrK4pWYcYtKxPolIOZEMaGyVPi6BWBc8Ld7y2kZlqY1AGaGdiJflhAoGAHJM4\na0EXGLL5oHEIfvUIX5My19F43A9FwOeXBwIsQMVrlzk1ZDYolEog/XWHjMe6wsFW\nvXz7G5pnJHyZazARYgLn8B1lYYOKSzwg9MbbE14yQ7FuJHKL3YS+3mUXiS6skjgi\nAR+sJ7ifIa49wxxsv/nQmsn33OGjMHtTPazSdjECgYBEdC8NGd/eJ0hpfNTlIOhV\ntfHc18fTnmv6hykoGoH1zejQ6a8vkYxlpY052Vk71HqKFGwIdy4u0EfWK3NfykNO\n/bP+hJkd45L0z1SpXcTKVImf17Ap5IQyJpKIu02chTyuoxDpbsdvXizRzzZDnYxa\nOeBkkDv2EybEelcW5oEAfw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "judge-steely@judge-steely.iam.gserviceaccount.com",
+  "client_id": "103623845593887352667",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/judge-steely%40judge-steely.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
